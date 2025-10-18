@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edukasi - Ketahanan Pangan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-icon">🌾</span>
+                <span>Ketahanan Pangan</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Beranda</a></li>
+                <li><a href="education.html" class="nav-link active">Edukasi</a></li>
+                <li><a href="simulation.html" class="nav-link">Simulasi</a></li>
+                <li><a href="quiz.html" class="nav-link">Kuis</a></li>
+                <li><a href="resources.html" class="nav-link">Sumber Daya</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <div class="page-header">
+            <h1>Edukasi Ketahanan Pangan</h1>
+            <p>Pelajari tentang penyebab, dampak, dan solusi</p>
+        </div>
+
+        <!-- Tab Navigation -->
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="causes">Penyebab</button>
+            <button class="tab-btn" data-tab="impacts">Dampak</button>
+            <button class="tab-btn" data-tab="solutions">Solusi</button>
+        </div>
+
+        <!-- Tab Content -->
+        <div class="tab-content">
+            <!-- Causes Tab -->
+            <div id="causes" class="tab-pane active">
+                <div class="content-grid">
+                    <div class="content-card">
+                        <div class="content-icon">🌍</div>
+                        <h3>Perubahan Iklim</h3>
+                        <p>Cuaca ekstrem dan perubahan pola musim mengurangi hasil panen dan meningkatkan harga pangan.</p>
+                        <div class="impact-bar">
+                            <div class="impact-fill" style="width: 85%"></div>
+                        </div>
+                        <small>Dampak: 85%</small>
+                    </div>
+                    <div class="content-card">
+                        <div class="content-icon">💰</div>
+                        <h3>Kemiskinan</h3>
+                        <p>Jutaan orang tidak memiliki pendapatan cukup untuk membeli makanan bergizi setiap hari.</p>
+                        <div class="impact-bar">
+                            <div class="impact-fill" style="width: 90%"></div>
+                        </div>
+                        <small>Dampak: 90%</small>
+                    </div>
+                    <div class="content-card">
+                        <div class="content-icon">⚔️</div>
+                        <h3>Konflik</h3>
+                        <p>Perang dan ketidakstabilan mengganggu produksi dan distribusi pangan.</p>
+                        <div class="impact-bar">
+                            <div class="impact-fill" style="width: 75%"></div>
+                        </div>
+                        <small>Dampak: 75%</small>
+                    </div>
+                    <div class="content-card">
+                        <div class="content-icon">🏭</div>
+                        <h3>Pertanian Tidak Berkelanjutan</h3>
+                        <p>Praktik pertanian yang buruk merusak tanah dan mengurangi produktivitas jangka panjang.</p>
+                        <div class="impact-bar">
+                            <div class="impact-fill" style="width: 80%"></div>
+                        </div>
+                        <small>Dampak: 80%</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Impacts Tab -->
+            <div id="impacts" class="tab-pane">
+                <div class="content-grid">
+                    <div class="content-card impact-card">
+                        <div class="content-icon">👶</div>
+                        <h3>Malnutrisi Anak</h3>
+                        <p>Anak-anak yang kekurangan gizi mengalami gangguan perkembangan fisik dan mental.</p>
+                        <div class="severity-badge high">Sangat Serius</div>
+                    </div>
+                    <div class="content-card impact-card">
+                        <div class="content-icon">🏥</div>
+                        <h3>Kesehatan Buruk</h3>
+                        <p>Kekurangan pangan menyebabkan penyakit dan meningkatkan angka kematian.</p>
+                        <div class="severity-badge high">Sangat Serius</div>
+                    </div>
+                    <div class="content-card impact-card">
+                        <div class="content-icon">📚</div>
+                        <h3>Pendidikan Terganggu</h3>
+                        <p>Anak-anak lapar tidak bisa fokus belajar dan sering putus sekolah.</p>
+                        <div class="severity-badge medium">Serius</div>
+                    </div>
+                    <div class="content-card impact-card">
+                        <div class="content-icon">🌊</div>
+                        <h3>Migrasi Paksa</h3>
+                        <p>Orang terpaksa meninggalkan rumah mencari pangan, menyebabkan ketidakstabilan sosial.</p>
+                        <div class="severity-badge medium">Serius</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Solutions Tab -->
+            <div id="solutions" class="tab-pane">
+                <div class="content-grid">
+                    <div class="content-card solution-card">
+                        <div class="content-icon">🌱</div>
+                        <h3>Pertanian Berkelanjutan</h3>
+                        <p>Menggunakan teknik ramah lingkungan untuk meningkatkan hasil panen jangka panjang.</p>
+                        <div class="action-items">
+                            <span class="action-tag">Rotasi Tanaman</span>
+                            <span class="action-tag">Kompos Organik</span>
+                            <span class="action-tag">Irigasi Efisien</span>
+                        </div>
+                    </div>
+                    <div class="content-card solution-card">
+                        <div class="content-icon">🤝</div>
+                        <h3>Kemitraan Global</h3>
+                        <p>Negara-negara bekerja sama berbagi sumber daya dan pengetahuan tentang pangan.</p>
+                        <div class="action-items">
+                            <span class="action-tag">Pertukaran Teknologi</span>
+                            <span class="action-tag">Bantuan Teknis</span>
+                            <span class="action-tag">Investasi Bersama</span>
+                        </div>
+                    </div>
+                    <div class="content-card solution-card">
+                        <div class="content-icon">💡</div>
+                        <h3>Inovasi Teknologi</h3>
+                        <p>Menggunakan teknologi modern untuk meningkatkan efisiensi produksi pangan.</p>
+                        <div class="action-items">
+                            <span class="action-tag">Pertanian Presisi</span>
+                            <span class="action-tag">Bioteknologi</span>
+                            <span class="action-tag">AI & Data</span>
+                        </div>
+                    </div>
+                    <div class="content-card solution-card">
+                        <div class="content-icon">♻️</div>
+                        <h3>Kurangi Pemborosan</h3>
+                        <p>Mengurangi limbah pangan dan mendistribusikan makanan lebih efisien ke yang membutuhkan.</p>
+                        <div class="action-items">
+                            <span class="action-tag">Penyimpanan Lebih Baik</span>
+                            <span class="action-tag">Distribusi Efisien</span>
+                            <span class="action-tag">Edukasi Konsumen</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Ketahanan Pangan - Edukasi & Kesadaran. Semua hak dilindungi.</p>
+    </footer>
+
+    <script src="shared.js"></script>
+    <script src="education.js"></script>
+</body>
+</html>
