@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ketahanan Pangan - Beranda</title>
+    <title>NutriQuest - Edukasi Ketahanan Pangan</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,15 +11,15 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <span class="logo-icon">🌾</span>
-                <span>Ketahanan Pangan</span>
+                <span class="logo-icon">🥗</span>
+                <span class="logo-text">NutriQuest</span>
             </div>
             <ul class="nav-menu">
                 <li><a href="index.html" class="nav-link active">Beranda</a></li>
                 <li><a href="education.html" class="nav-link">Edukasi</a></li>
                 <li><a href="simulation.html" class="nav-link">Simulasi</a></li>
                 <li><a href="quiz.html" class="nav-link">Kuis</a></li>
-                <li><a href="resources.html" class="nav-link">Sumber Daya</a></li>
+                <li><a href="resources.html" class="nav-link">Tentang Kami</a></li>
             </ul>
             <div class="hamburger">
                 <span></span>
@@ -31,15 +31,21 @@
 
     <!-- Main Content -->
     <main>
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Memahami Ketahanan Pangan</h1>
-                <p>Pelajari tentang tantangan pangan global dan bagaimana kita bisa membuat perbedaan</p>
-                <a href="education.html" class="btn btn-primary">Mulai Belajar</a>
-            </div>
-            <div class="hero-image">
-                <div class="illustration">🌱</div>
+        <!-- Hero Section with Image Background -->
+        <section class="hero-video">
+            <img class="hero-video-bg" 
+                src="https://eastasiaforum.org/wp-content/uploads/2025/01/2020-06-05T061349Z_713383773_MT1IMGCN0003I7ZML_RTRMADP_3_CHINA-CHINESE-TAIZHOU-FARMING-JIANGSU-scaled.jpg" 
+                alt="Ketahanan Pangan">
+            
+            <div class="hero-overlay"></div>
+            
+            <div class="hero-video-content">
+                <h1 class="hero-title">Memahami Ketahanan Pangan</h1>
+                <p class="hero-subtitle">Pelajari tentang tantangan pangan global dan bagaimana kita bisa membuat perbedaan</p>
+                <div class="hero-buttons">
+                    <a href="education.html" class="btn btn-primary btn-lg">Mulai Belajar</a>
+                    <a href="resources.html" class="btn btn-secondary btn-lg">Pelajari Lebih Lanjut</a>
+                </div>
             </div>
         </section>
 
@@ -71,7 +77,7 @@
             <div class="stats-grid">
                 <div class="stat-card">
                     <div class="stat-number" data-target="828">0</div>
-                    <div class="stat-label">Juta Orang Kelaparan</div>
+                    <div class="stat-label"><span class="stat-unit">jt</span> Orang Kelaparan</div>
                 </div>
                 <div class="stat-card">
                     <div class="stat-number" data-target="1">0</div>
@@ -79,7 +85,7 @@
                 </div>
                 <div class="stat-card">
                     <div class="stat-number" data-target="40">0</div>
-                    <div class="stat-label">% Makanan Terbuang</div>
+                    <div class="stat-label"><span class="stat-unit">%</span> Makanan Terbuang</div>
                 </div>
             </div>
         </section>
@@ -87,7 +93,7 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2025 Ketahanan Pangan - Edukasi & Kesadaran. Semua hak dilindungi.</p>
+        <p>&copy; 2025 NutriQuest - Edukasi & Kesadaran Ketahanan Pangan. Semua hak dilindungi.</p>
     </footer>
 
     <script src="shared.js"></script>

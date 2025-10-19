@@ -7,6 +7,12 @@ const foods = [
   { name: "Susu", price: 7000, icon: "🥛", nutrition: "Kalsium" },
   { name: "Roti", price: 4000, icon: "🍞", nutrition: "Karbohidrat" },
   { name: "Ikan", price: 9000, icon: "🐟", nutrition: "Protein" },
+  { name: "Kacang", price: 5000, icon: "🥜", nutrition: "Protein" },
+  { name: "Beras Merah", price: 6000, icon: "🌾", nutrition: "Karbohidrat" },
+  { name: "Bayam", price: 3000, icon: "🥬", nutrition: "Vitamin" },
+  { name: "Wortel", price: 4000, icon: "🥕", nutrition: "Vitamin" },
+  { name: "Tahu", price: 4000, icon: "🟫", nutrition: "Protein" },
+  { name: "Tempe", price: 3500, icon: "🟫", nutrition: "Protein" },
 ]
 
 const budget = 50000

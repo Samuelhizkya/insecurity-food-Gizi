@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kuis - Ketahanan Pangan</title>
+    <title>Kuis - NutriQuest</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,15 +11,15 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <span class="logo-icon">🌾</span>
-                <span>Ketahanan Pangan</span>
+                <span class="logo-icon">🥗</span>
+                <span class="logo-text">NutriQuest</span>
             </div>
             <ul class="nav-menu">
                 <li><a href="index.html" class="nav-link">Beranda</a></li>
                 <li><a href="education.html" class="nav-link">Edukasi</a></li>
                 <li><a href="simulation.html" class="nav-link">Simulasi</a></li>
                 <li><a href="quiz.html" class="nav-link active">Kuis</a></li>
-                <li><a href="resources.html" class="nav-link">Sumber Daya</a></li>
+                <li><a href="resources.html" class="nav-link">Tentang Kami</a></li>
             </ul>
             <div class="hamburger">
                 <span></span>
@@ -31,9 +31,20 @@
 
     <!-- Main Content -->
     <main>
-        <div class="page-header">
-            <h1>Kuis Ketahanan Pangan</h1>
-            <p>Uji pengetahuan Anda tentang ketahanan pangan</p>
+        <!-- Added gradient background for quiz page instead of image -->
+        <!-- Added background image with overlay and interactive symbols -->
+        <div class="page-header-gradient" style="background-image: url('https://bimba-aiueo.com/wp-content/uploads/2017/04/O6VNJU0.jpg'); background-size: cover; background-position: center; position: relative;">
+            <div class="quiz-header-overlay"></div>
+            <div class="quiz-header-content">
+                <h1>Kuis Ketahanan Pangan</h1>
+                <p>Uji pengetahuan Anda tentang ketahanan pangan</p>
+                <!-- Added interactive moving symbols -->
+                <div class="quiz-animated-symbols">
+                    <span class="quiz-symbol quiz-symbol-1">🥗</span>
+                    <span class="quiz-symbol quiz-symbol-2">❓</span>
+                    <span class="quiz-symbol quiz-symbol-3">🌾</span>
+                </div>
+            </div>
         </div>
 
         <!-- Quiz Progress -->
@@ -52,7 +63,7 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2025 Ketahanan Pangan - Edukasi & Kesadaran. Semua hak dilindungi.</p>
+        <p>&copy; 2025 NutriQuest - Edukasi & Kesadaran Ketahanan Pangan. Semua hak dilindungi.</p>
     </footer>
 
     <script src="shared.js"></script>

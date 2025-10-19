@@ -3,23 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sumber Daya - Ketahanan Pangan</title>
+    <title>Tentang Kami - NutriQuest</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <span class="logo-icon">🌾</span>
-                <span>Ketahanan Pangan</span>
+                <span class="logo-icon">🥗</span>
+                <span class="logo-text">NutriQuest</span>
             </div>
             <ul class="nav-menu">
                 <li><a href="index.html" class="nav-link">Beranda</a></li>
                 <li><a href="education.html" class="nav-link">Edukasi</a></li>
                 <li><a href="simulation.html" class="nav-link">Simulasi</a></li>
                 <li><a href="quiz.html" class="nav-link">Kuis</a></li>
-                <li><a href="resources.html" class="nav-link active">Sumber Daya</a></li>
+                <li><a href="resources.html" class="nav-link active">Tentang Kami</a></li>
             </ul>
             <div class="hamburger">
                 <span></span>
@@ -31,96 +32,137 @@
 
     <!-- Main Content -->
     <main>
-        <div class="page-header">
-            <h1>Sumber Daya & Informasi</h1>
-            <p>Organisasi dan kontak untuk membantu ketahanan pangan</p>
-        </div>
-
-        <!-- International Organizations -->
-        <div class="resources-section">
-            <h2>Organisasi Internasional</h2>
-            <div class="resources-grid">
-                <div class="resource-card">
-                    <div class="resource-badge">🌍 Global</div>
-                    <h3>FAO (Organisasi Pangan Dunia)</h3>
-                    <p>Badan PBB yang memimpin upaya global melawan kelaparan dan meningkatkan pertanian.</p>
-                    <a href="https://www.fao.org" target="_blank" class="btn btn-link">Kunjungi Website →</a>
-                </div>
-                <div class="resource-card">
-                    <div class="resource-badge">🤝 Bantuan</div>
-                    <h3>World Food Programme</h3>
-                    <p>Organisasi yang memberikan bantuan pangan darurat dan program pembangunan jangka panjang.</p>
-                    <a href="https://www.wfp.org" target="_blank" class="btn btn-link">Kunjungi Website →</a>
-                </div>
-                <div class="resource-card">
-                    <div class="resource-badge">🌱 Riset</div>
-                    <h3>CGIAR</h3>
-                    <p>Kemitraan penelitian global untuk pertanian berkelanjutan dan ketahanan pangan.</p>
-                    <a href="https://www.cgiar.org" target="_blank" class="btn btn-link">Kunjungi Website →</a>
+        <!-- Full page background image with overlay -->
+        <div class="resources-page-bg" style="background-image: url('https://keperawatan.fk.untad.ac.id/wp-content/uploads/2021/01/Foto-Bayang-2.jpg');">
+            <div class="resources-page-overlay"></div>
+            
+            <!-- Team Section -->
+            <div class="resources-section team-section">
+                <h2>Tentang Kami</h2>
+                <p class="section-subtitle">Pendiri dan Pengembang NutriQuest</p>
+                
+                <!-- Updated team member with Siti Fadilah Djafer and interactive animations -->
+                <div class="team-grid-single">
+                    <div class="team-card">
+                        <div class="team-card-image">
+                            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-10-19%20at%2008.55.21-BW3B4kPo97QkpHfhMljq6OJMwqgPSE.jpeg" alt="Siti Fadilah Djafer">
+                        </div>
+                        <div class="team-card-content">
+                            <h3>Siti Fadilah Djafer</h3>
+                            <p class="team-role">Pendiri & Pengembang NutriQuest</p>
+                            
+                            <!-- Added interactive animated symbols -->
+                            <div class="animated-symbols">
+                                <span class="symbol symbol-1">🥗</span>
+                                <span class="symbol symbol-2">🌾</span>
+                                <span class="symbol symbol-3">🥕</span>
+                            </div>
+                            
+                            <div class="team-info">
+                                <div class="info-item">
+                                    <span class="info-label">NIM:</span>
+                                    <span class="info-value">P21124004</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">Kelompok:</span>
+                                    <span class="info-value">3</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">Kelas:</span>
+                                    <span class="info-value">Gizi A</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Local Organizations -->
-        <div class="resources-section">
-            <h2>Organisasi Lokal Indonesia</h2>
-            <div class="resources-grid">
-                <div class="resource-card">
-                    <div class="resource-badge">🇮🇩 Lokal</div>
-                    <h3>Kementerian Pertanian</h3>
-                    <p>Lembaga pemerintah yang mengurus kebijakan pertanian dan ketahanan pangan nasional.</p>
-                    <a href="https://www.pertanian.go.id" target="_blank" class="btn btn-link">Kunjungi Website →</a>
-                </div>
-                <div class="resource-card">
-                    <div class="resource-badge">🤝 Komunitas</div>
-                    <h3>Gerakan Pangan Lokal</h3>
-                    <p>Komunitas yang mempromosikan pertanian lokal dan ketahanan pangan di tingkat komunitas.</p>
-                    <a href="#" target="_blank" class="btn btn-link">Pelajari Lebih Lanjut →</a>
-                </div>
-                <div class="resource-card">
-                    <div class="resource-badge">📚 Edukasi</div>
-                    <h3>Program Edukasi Pangan</h3>
-                    <p>Program pendidikan untuk meningkatkan kesadaran tentang pentingnya ketahanan pangan.</p>
-                    <a href="#" target="_blank" class="btn btn-link">Pelajari Lebih Lanjut →</a>
+            <!-- Combined International and Local Organizations into one section -->
+            <div class="resources-section">
+                <h2>Organisasi Mitra Kami</h2>
+                <p class="section-subtitle">Organisasi Internasional dan Lokal yang Mendukung Ketahanan Pangan</p>
+                <!-- Single horizontal scrollable container for all organizations -->
+                <div class="resources-scroll-container">
+                    <!-- International Organizations -->
+                    <div class="resource-card-scroll">
+                        <div class="resource-badge">🌍 Global</div>
+                        <h3>FAO (Organisasi Pangan Dunia)</h3>
+                        <p>Badan PBB yang memimpin upaya global melawan kelaparan dan meningkatkan pertanian.</p>
+                        <a href="https://www.fao.org" target="_blank" class="btn btn-link">Kunjungi Website →</a>
+                    </div>
+                    <div class="resource-card-scroll">
+                        <div class="resource-badge">🤝 Bantuan</div>
+                        <h3>World Food Programme</h3>
+                        <p>Organisasi yang memberikan bantuan pangan darurat dan program pembangunan jangka panjang.</p>
+                        <a href="https://www.wfp.org" target="_blank" class="btn btn-link">Kunjungi Website →</a>
+                    </div>
+                    <div class="resource-card-scroll">
+                        <div class="resource-badge">🌱 Riset</div>
+                        <h3>CGIAR</h3>
+                        <p>Kemitraan penelitian global untuk pertanian berkelanjutan dan ketahanan pangan.</p>
+                        <a href="https://www.cgiar.org" target="_blank" class="btn btn-link">Kunjungi Website →</a>
+                    </div>
+                    
+                    <!-- Local Organizations -->
+                    <div class="resource-card-scroll">
+                        <div class="resource-badge">🇮🇩 Lokal</div>
+                        <h3>Kementerian Pertanian</h3>
+                        <p>Lembaga pemerintah yang mengurus kebijakan pertanian dan ketahanan pangan nasional.</p>
+                        <a href="https://www.pertanian.go.id" target="_blank" class="btn btn-link">Kunjungi Website →</a>
+                    </div>
+                    <div class="resource-card-scroll">
+                        <div class="resource-badge">🤝 Komunitas</div>
+                        <h3>Gerakan Pangan Lokal</h3>
+                        <p>Komunitas yang mempromosikan pertanian lokal dan ketahanan pangan di tingkat komunitas.</p>
+                        <a href="#" target="_blank" class="btn btn-link">Pelajari Lebih Lanjut →</a>
+                    </div>
+                    <div class="resource-card-scroll">
+                        <div class="resource-badge">📚 Edukasi</div>
+                        <h3>Program Edukasi Pangan</h3>
+                        <p>Program pendidikan untuk meningkatkan kesadaran tentang pentingnya ketahanan pangan.</p>
+                        <a href="#" target="_blank" class="btn btn-link">Pelajari Lebih Lanjut →</a>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Contact Section -->
-        <div class="resources-section">
-            <h2>Hubungi Kami</h2>
-            <div class="contact-card">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <span class="contact-icon">📧</span>
-                        <div>
-                            <strong>Email</strong>
-                            <p>info@ketahananpangan.id</p>
-                        </div>
+            <!-- Contact Section -->
+            <div class="resources-section">
+                <h2>Hubungi Kami</h2>
+                <p class="section-subtitle">Kami siap membantu Anda dengan pertanyaan atau masukan tentang NutriQuest</p>
+                
+                <!-- Redesigned contact section with three separate interactive cards -->
+                <div class="contact-cards-grid">
+                    <div class="contact-card-item">
+                        <div class="contact-card-icon">📧</div>
+                        <h3>Email</h3>
+                        <p class="contact-detail">info@nutriquest.id</p>
+                        <p class="contact-description">Kirim email kepada kami untuk pertanyaan umum</p>
+                        <a href="mailto:info@nutriquest.id" class="btn btn-contact">Kirim Email</a>
                     </div>
-                    <div class="contact-item">
-                        <span class="contact-icon">📞</span>
-                        <div>
-                            <strong>Telepon</strong>
-                            <p>+62-XXX-XXXX-XXXX</p>
-                        </div>
+                    
+                    <div class="contact-card-item">
+                        <div class="contact-card-icon">📞</div>
+                        <h3>Telepon</h3>
+                        <p class="contact-detail">+62 852-1078-4090</p>
+                        <p class="contact-description">Hubungi kami langsung untuk bantuan cepat</p>
+                        <a href="tel:+6285210784090" class="btn btn-contact">Hubungi Sekarang</a>
                     </div>
-                    <div class="contact-item">
-                        <span class="contact-icon">📍</span>
-                        <div>
-                            <strong>Lokasi</strong>
-                            <p>Jakarta, Indonesia</p>
-                        </div>
+                    
+                    <div class="contact-card-item">
+                        <div class="contact-card-icon">📍</div>
+                        <h3>Lokasi</h3>
+                        <p class="contact-detail">Kota Palu, Sulawesi Tengah</p>
+                        <p class="contact-description">Kunjungi kantor kami di Indonesia</p>
+                        <a href="#" class="btn btn-contact">Lihat Peta</a>
                     </div>
                 </div>
-                <button class="btn btn-primary" onclick="showContactForm()">Kirim Pesan</button>
             </div>
         </div>
     </main>
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2025 Ketahanan Pangan - Edukasi & Kesadaran. Semua hak dilindungi.</p>
+        <p>&copy; 2025 NutriQuest - Edukasi & Kesadaran Ketahanan Pangan. Semua hak dilindungi.</p>
     </footer>
 
     <script src="shared.js"></script>

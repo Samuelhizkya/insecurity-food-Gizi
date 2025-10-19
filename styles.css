@@ -57,6 +57,15 @@ body {
   font-size: 2rem;
 }
 
+.logo-text {
+  background: linear-gradient(135deg, #86efac, #fef3c7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
 .nav-menu {
   display: flex;
   list-style: none;
@@ -69,6 +78,7 @@ body {
   transition: color 0.3s ease;
   cursor: pointer;
   position: relative;
+  font-weight: 500;
 }
 
 .nav-link:hover,
@@ -100,71 +110,138 @@ body {
   transition: 0.3s;
 }
 
-/* Hero Section */
-.hero {
-  background: linear-gradient(135deg, var(--primary-green) 0%, #3d6b1f 100%);
-  color: var(--light-text);
-  padding: 4rem 1rem;
+/* Hero Section with Video Background */
+.hero-video {
+  position: relative;
+  height: 600px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  justify-content: center;
+  overflow: hidden;
 }
 
-.hero-content {
-  flex: 1;
+.hero-video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  border: none;
 }
 
-.hero-content h1 {
-  font-size: 3rem;
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.hero-video-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  color: var(--light-text);
+  max-width: 800px;
+  padding: 2rem;
+  animation: fadeInUp 1s ease;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
   margin-bottom: 1rem;
   line-height: 1.2;
-  animation: slideInLeft 0.8s ease;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
 
-.hero-content p {
-  font-size: 1.1rem;
+.hero-subtitle {
+  font-size: 1.3rem;
   margin-bottom: 2rem;
   opacity: 0.95;
-  animation: slideInLeft 0.8s ease 0.2s both;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
 }
 
-.hero-content .btn {
-  animation: slideInLeft 0.8s ease 0.4s both;
-}
-
-.hero-image {
-  flex: 1;
+.hero-buttons {
   display: flex;
+  gap: 1rem;
   justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Added page header with background image and overlay */
+.page-header-with-bg {
+  position: relative;
+  height: 400px;
+  display: flex;
   align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
 }
 
-.illustration {
-  font-size: 8rem;
-  animation: float 3s ease-in-out infinite;
+.page-header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
 }
 
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
+.page-header-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: var(--light-text);
+  max-width: 800px;
+  padding: 2rem;
 }
 
-@keyframes slideInLeft {
+.page-header-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.page-header-content p {
+  font-size: 1.1rem;
+  opacity: 0.95;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Added gradient background for quiz page */
+.page-header-gradient {
+  background: linear-gradient(135deg, var(--primary-green) 0%, #3d6b1f 100%);
+  color: var(--light-text);
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.page-header-gradient h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.page-header-gradient p {
+  font-size: 1.1rem;
+  opacity: 0.95;
+}
+
+@keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateX(-30px);
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
   }
 }
 
@@ -177,6 +254,13 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
   font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-lg {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
 }
 
 .btn-primary {
@@ -191,12 +275,14 @@ body {
 }
 
 .btn-secondary {
-  background-color: var(--light-green);
-  color: var(--primary-green);
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
 }
 
 .btn-secondary:hover {
-  background-color: #65e8ac;
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
 }
 
 .btn-link {
@@ -208,6 +294,17 @@ body {
 
 .btn-link:hover {
   color: #b45309;
+}
+
+.btn-reset {
+  background-color: #6b7280;
+  color: white;
+}
+
+.btn-reset:hover {
+  background-color: #4b5563;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(107, 114, 128, 0.3);
 }
 
 /* Features Section */
@@ -238,6 +335,8 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
   border: 2px solid transparent;
+  text-decoration: none;
+  color: inherit;
 }
 
 .feature-card:hover {
@@ -317,6 +416,12 @@ body {
   color: var(--secondary-orange);
   display: block;
   margin-bottom: 0.5rem;
+}
+
+.stat-unit {
+  font-size: 1.2rem;
+  margin-left: 0.3rem;
+  font-weight: 600;
 }
 
 .stat-label {
@@ -429,7 +534,7 @@ body {
   margin-bottom: 0.5rem;
 }
 
-/* Added impact bar styling for causes section */
+/* Impact bar styling for causes section */
 .impact-bar {
   background-color: #e5e7eb;
   height: 8px;
@@ -451,7 +556,7 @@ body {
   }
 }
 
-/* Added severity badges for impacts section */
+/* Severity badges for impacts section */
 .severity-badge {
   display: inline-block;
   padding: 0.5rem 1rem;
@@ -471,7 +576,7 @@ body {
   color: #92400e;
 }
 
-/* Added action tags for solutions section */
+/* Action tags for solutions section */
 .action-items {
   display: flex;
   flex-wrap: wrap;
@@ -495,7 +600,7 @@ body {
   padding: 0 1rem;
 }
 
-/* Enhanced budget display with progress visualization -->
+/* Budget display with progress visualization */
 .budget-info {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -566,7 +671,7 @@ body {
   font-weight: 600;
 }
 
-/* Added simulation instructions -->
+/* Simulation instructions */
 .simulation-instructions {
   background-color: #dbeafe;
   border-left: 4px solid #3b82f6;
@@ -676,7 +781,7 @@ body {
   background-color: #fecaca;
 }
 
-/* Added simulation actions styling -->
+/* Simulation actions styling */
 .simulation-actions {
   display: flex;
   gap: 1rem;
@@ -815,99 +920,240 @@ body {
 }
 
 /* Resources */
+.resources-page-bg {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  min-height: 100vh;
+  padding-top: 0;
+}
+
+.resources-page-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 0;
+}
+
 .resources-section {
+  position: relative;
+  z-index: 1;
   max-width: 1200px;
-  margin: 3rem auto;
-  padding: 0 1rem;
+  margin: 2rem auto 0;
+  padding: 2rem 1rem;
 }
 
 .resources-section h2 {
-  font-size: 1.8rem;
-  color: var(--primary-green);
-  margin-bottom: 2rem;
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: var(--light-text);
+  margin-bottom: 0.5rem;
   text-align: center;
+  text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.6);
 }
 
-.resources-grid {
+.section-subtitle {
+  text-align: center;
+  color: var(--light-text);
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  opacity: 0.95;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Team section styling */
+.team-section {
+  margin-top: 2rem;
+}
+
+.team-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
+  margin-bottom: 3rem;
 }
 
-.resource-card {
-  background-color: white;
-  border: 2px solid var(--border-color);
+.team-grid-single {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.team-grid-single .team-card {
+  max-width: 400px;
+  width: 100%;
+}
+
+.team-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(254, 243, 199, 0.95) 100%);
   border-radius: 1rem;
-  padding: 2rem;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
-  position: relative;
+  border: 2px solid transparent;
 }
 
-.resource-card:hover {
+.team-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
   border-color: var(--secondary-orange);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  transform: translateY(-5px);
 }
 
-/* Added resource badge styling -->
-.resource-badge {
-  display: inline-block;
-  background-color: var(--cream);
+.team-card-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--primary-green), var(--light-green));
+}
+
+.team-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover .team-card-image img {
+  transform: scale(1.05);
+}
+
+.team-card-content {
+  padding: 1.5rem;
+}
+
+.team-card-content h3 {
   color: var(--primary-green);
-  padding: 0.4rem 0.8rem;
-  border-radius: 20px;
-  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.team-role {
+  color: var(--secondary-orange);
   font-weight: 600;
   margin-bottom: 1rem;
+  font-size: 0.95rem;
 }
 
-.resource-card h3 {
-  color: var(--primary-green);
-  margin-bottom: 1rem;
+.team-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  border-top: 2px solid var(--border-color);
+  padding-top: 1rem;
 }
 
-.resource-card p {
-  margin-bottom: 1.5rem;
-  color: var(--dark-text);
-}
-
-/* Added contact card styling -->
-.contact-card {
-  background-color: white;
-  border: 2px solid var(--border-color);
-  border-radius: 1rem;
-  padding: 2rem;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 2rem;
+.info-item {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
-.contact-info {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.contact-item {
-  display: flex;
-  gap: 1rem;
-  align-items: flex-start;
-}
-
-.contact-icon {
-  font-size: 1.5rem;
-}
-
-.contact-item strong {
+.info-label {
   color: var(--primary-green);
-  display: block;
-  margin-bottom: 0.25rem;
+  font-weight: 600;
+  font-size: 0.9rem;
 }
 
-.contact-item p {
+.info-value {
   color: var(--dark-text);
-  margin: 0;
+  font-weight: 500;
+}
+
+/* Contact card styling */
+.contact-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.contact-card-item {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(254, 243, 199, 0.95) 100%);
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-card-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--secondary-orange), #f97316);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.contact-card-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+  border-color: var(--secondary-orange);
+}
+
+.contact-card-item:hover::before {
+  transform: scaleX(1);
+}
+
+.contact-card-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  animation: float 3s ease-in-out infinite;
+}
+
+.contact-card-item h3 {
+  color: var(--primary-green);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.contact-detail {
+  color: var(--secondary-orange);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.contact-description {
+  color: var(--dark-text);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.btn-contact {
+  background: linear-gradient(135deg, var(--secondary-orange), #f97316);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-contact:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(217, 119, 6, 0.3);
+  background: linear-gradient(135deg, #b45309, #ea580c);
 }
 
 /* Pages */
@@ -939,17 +1185,24 @@ body {
     display: flex;
   }
 
-  .hero {
-    flex-direction: column;
-    padding: 2rem 1rem;
+  .hero-video {
+    height: 400px;
   }
 
-  .hero-content h1 {
+  .hero-title {
     font-size: 2rem;
   }
 
-  .illustration {
-    font-size: 5rem;
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .btn-lg {
+    width: 100%;
   }
 
   .feature-grid,
@@ -971,11 +1224,210 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   }
 
-  .contact-card {
+  .contact-cards-grid {
     grid-template-columns: 1fr;
   }
 
-  .page-header h1 {
+  .contact-card-item {
+    padding: 1.5rem;
+  }
+
+  .contact-card-icon {
+    font-size: 2.5rem;
+  }
+
+  .page-header-with-bg {
+    height: 300px;
+  }
+
+  .page-header-content h1 {
     font-size: 1.8rem;
+  }
+
+  .page-header-gradient h1 {
+    font-size: 1.8rem;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .resources-page-bg {
+    background-attachment: scroll;
+  }
+}
+
+/* Added horizontal scrollable container for organizations */
+.resources-scroll-container {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  padding: 1rem 0;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.resources-scroll-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.resources-scroll-container::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.resources-scroll-container::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}
+
+.resources-scroll-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Added styling for scrollable resource cards with background */
+.resource-card-scroll {
+  flex: 0 0 300px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(254, 243, 199, 0.95) 100%);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  backdrop-filter: blur(10px);
+}
+
+.resource-card-scroll:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  border-color: var(--secondary-orange);
+}
+
+.resource-card-scroll h3 {
+  color: var(--primary-green);
+  margin: 1rem 0 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.resource-card-scroll p {
+  color: var(--dark-text);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.resource-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--secondary-orange), #f97316);
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* Added animated symbols styling */
+.animated-symbols {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
+  padding: 1rem 0;
+  border-top: 2px solid var(--border-color);
+  border-bottom: 2px solid var(--border-color);
+}
+
+.symbol {
+  font-size: 1.8rem;
+  animation: float 3s ease-in-out infinite;
+  display: inline-block;
+}
+
+.symbol-1 {
+  animation-delay: 0s;
+}
+
+.symbol-2 {
+  animation-delay: 0.5s;
+}
+
+.symbol-3 {
+  animation-delay: 1s;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(5deg);
+  }
+}
+
+/* Added styling for quiz header with background image and overlay */
+.quiz-header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+
+.quiz-header-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: var(--light-text);
+  padding: 3rem 1rem;
+}
+
+.quiz-header-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.quiz-header-content p {
+  font-size: 1.1rem;
+  opacity: 0.95;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Added animated symbols for quiz page */
+.quiz-animated-symbols {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.quiz-symbol {
+  font-size: 2rem;
+  animation: bounce-quiz 2s infinite;
+  display: inline-block;
+}
+
+.quiz-symbol-1 {
+  animation-delay: 0s;
+}
+
+.quiz-symbol-2 {
+  animation-delay: 0.3s;
+}
+
+.quiz-symbol-3 {
+  animation-delay: 0.6s;
+}
+
+@keyframes bounce-quiz {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
   }
 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulasi - Ketahanan Pangan</title>
+    <title>Simulasi - NutriQuest</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,15 +11,15 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <span class="logo-icon">🌾</span>
-                <span>Ketahanan Pangan</span>
+                <span class="logo-icon">🥗</span>
+                <span class="logo-text">NutriQuest</span>
             </div>
             <ul class="nav-menu">
                 <li><a href="index.html" class="nav-link">Beranda</a></li>
                 <li><a href="education.html" class="nav-link">Edukasi</a></li>
                 <li><a href="simulation.html" class="nav-link active">Simulasi</a></li>
                 <li><a href="quiz.html" class="nav-link">Kuis</a></li>
-                <li><a href="resources.html" class="nav-link">Sumber Daya</a></li>
+                <li><a href="resources.html" class="nav-link">Tentang Kami</a></li>
             </ul>
             <div class="hamburger">
                 <span></span>
@@ -31,9 +31,13 @@
 
     <!-- Main Content -->
     <main>
-        <div class="page-header">
-            <h1>Simulasi Anggaran Pangan</h1>
-            <p>Rasakan tantangan memilih makanan dengan anggaran terbatas</p>
+        <!-- Added background image with overlay for simulation page -->
+        <div class="page-header-with-bg" style="background-image: url('https://image.healthjd.com/da/jfs/t1/139985/3/15089/309198/5fb87787Ec1d7f92b/f95d136f31c904b8.jpg');">
+            <div class="page-header-overlay"></div>
+            <div class="page-header-content">
+                <h1>Simulasi Anggaran Pangan</h1>
+                <p>Rasakan tantangan memilih makanan dengan anggaran terbatas</p>
+            </div>
         </div>
 
         <div class="simulation-container">
@@ -70,7 +74,7 @@
                 <h3>🛒 Makanan Pilihan Anda</h3>
                 <div id="selectedList" class="selected-list"></div>
                 <div class="simulation-actions">
-                    <button class="btn btn-secondary" onclick="resetSimulation()">Reset</button>
+                    <button class="btn btn-reset" onclick="resetSimulation()">Reset</button>
                     <button class="btn btn-primary" onclick="analyzeNutrition()" id="analyzeBtn" style="display: none;">Analisis Nutrisi</button>
                 </div>
             </div>
@@ -86,7 +90,7 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2025 Ketahanan Pangan - Edukasi & Kesadaran. Semua hak dilindungi.</p>
+        <p>&copy; 2025 NutriQuest - Edukasi & Kesadaran Ketahanan Pangan. Semua hak dilindungi.</p>
     </footer>
 
     <script src="shared.js"></script>
